@@ -59,14 +59,14 @@ Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso
 
 ## Tabla Técnica
 
-| **Dato**                  | **Atributo** | **Bytes** | **Formato** | **Comentarios**                                           |
-| ------------------------- | ------------ | --------- | ----------- | --------------------------------------------------------- |
-| **Longitud Total**        | N2           | 2         | BCD         | —                                                         |
-| **Tipo de Producto**      | An3          | 3         | ASCII       | “028”                                                     |
-| **Cantidad de Subcampos** | N4           | 4         | ASCII       | “0001”                                                    |
-| **Longitud Sub-Campo**    | N3           | 3         | ASCII       | “004”                                                     |
-| **ID Sub-Campo**          | An3          | 3         | ASCII       | “078”                                                     |
-| **Dato Sub-Campo**        | N1           | 1         | ASCII       | Capacidad de encripción 3DES asignada por PRISMA MP (0–9) |
+| **Dato**                  | **Atributo** | **Bytes** | **Formato** | **Comentarios**                                                            |
+| ------------------------- | ------------ | --------- | ----------- | -------------------------------------------------------------------------- |
+| **Longitud Total**        | N2           | 2         | BCD         | —                                                                          |
+| **Tipo de Producto**      | An3          | 3         | ASCII       | “028”                                                                      |
+| **Cantidad de Subcampos** | N4           | 4         | ASCII       | “0001”                                                                     |
+| **Longitud Sub-Campo**    | N3           | 3         | ASCII       | “004”                                                                      |
+| **ID Sub-Campo**          | An3          | 3         | ASCII       | “078”                                                                      |
+| **Dato Sub-Campo**        | N1           | 1         | ASCII       | Capacidad de encripción 3DES asignada por PRISMA MP (0–9) Ref tabla indice |
 
 ## Ejemplo ASCII
 
@@ -82,14 +82,14 @@ Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso
 
 ## Tabla Técnica
 
-| **Dato**                  | **Atributo** | **Bytes** | **Formato** | **Comentarios**                                              |
-| ------------------------- | ------------ | --------- | ----------- | ------------------------------------------------------------ |
-| **Longitud Total**        | N2           | 2         | BCD         | —                                                            |
-| **Tipo de Producto**      | An3          | 3         | ASCII       | “028”                                                        |
-| **Cantidad de Subcampos** | N4           | 4         | ASCII       | “0001”                                                       |
-| **Longitud Sub-Campo**    | N3           | 3         | ASCII       | “005”                                                        |
-| **ID Sub-Campo**          | An3          | 3         | ASCII       | “078”                                                        |
-| **Dato Sub-Campo**        | N2           | 2         | ASCII       | Capacidad de encripción 3DES asignada por PRISMA MP (10..99) |
+| **Dato**                  | **Atributo** | **Bytes** | **Formato** | **Comentarios**                                                               |
+| ------------------------- | ------------ | --------- | ----------- | ----------------------------------------------------------------------------- |
+| **Longitud Total**        | N2           | 2         | BCD         | —                                                                             |
+| **Tipo de Producto**      | An3          | 3         | ASCII       | “028”                                                                         |
+| **Cantidad de Subcampos** | N4           | 4         | ASCII       | “0001”                                                                        |
+| **Longitud Sub-Campo**    | N3           | 3         | ASCII       | “005”                                                                         |
+| **ID Sub-Campo**          | An3          | 3         | ASCII       | “078”                                                                         |
+| **Dato Sub-Campo**        | N2           | 2         | ASCII       | Capacidad de encripción 3DES asignada por PRISMA MP (10..99) Ref tabla indice |
 
 ## Ejemplo ASCII
 
@@ -98,6 +98,14 @@ Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso
 
     (XX = valor entre 10 y 99)
 ```
+
+### Índices de Dispositivos Payway Productivos
+
+| Índice | Dispositivo        |
+| ------:| ------------------ |
+| 4      | Newland N910+      |
+| 6      | Ingenico Lane 3000 |
+| 11     | Nexgo N6           |
 
 # Producto 084 – KSN DUKPT
 
@@ -663,8 +671,6 @@ En caso de no conocer el subtipo de QR, el Comercio deberá informar el valor **
 ```text
 0830002004208Q00525560
 ```
-
-
 
 **Producto 085 – ID de Billetera**
 
