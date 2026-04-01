@@ -1,23 +1,23 @@
 # Índice de Productos
 
-| # | Producto | Descripción |
-|---|----------|-------------|
-| 1 | [Producto 021](#producto-021--indicador-de-capacidad-de-la-terminal) | Indicador de Capacidad de la Terminal |
-| 2 | [Producto 028 (1 dígito)](#producto-028--indicador-de-encripción-3desdukpt-1-dígito) | Indicador de Encripción 3DES/DUKPT (1 dígito) |
-| 3 | [Producto 028 (2 dígitos)](#producto-028--indicador-de-encripción-3desdukpt-2-dígitos) | Indicador de Encripción 3DES/DUKPT (2 dígitos) |
-| 4 | [Producto 084](#producto-084--ksn-dukpt) | KSN DUKPT |
-| 5 | [Producto 078](#producto-078--indicador-de-mpos) | Indicador de mPOS |
-| 6 | [Producto 022](#producto-022--indicador-de-fallback) | Indicador de Fallback |
-| 7 | [Producto 101](#producto-101--indicador-de-requerimiento-de-tid) | Indicador de requerimiento de TID |
-| 8 | [Producto 043](#producto-043--tid-terminal-identification) | TID (Terminal Identification) |
-| 9 | [Producto 103](#producto-103--identificador-del-submerchant-id) | Identificador del Submerchant ID |
-| 10 | [Producto 062](#producto-062--nombre-o-datos-del-submerchant) | Nombre o Datos del Submerchant |
-| 11 | [Producto 033](#producto-033--datos-del-submerchant-payfac) | Datos del Submerchant (PayFac) |
-| 12 | [Producto 102](#producto-102--identificador-del-gateway) | Identificador del Gateway |
-| 13 | [Producto 094](#producto-094--indicador-de-autorización-parcial) | Indicador de Autorización Parcial |
-| 14 | [Producto 044](#producto-044--importe-original-solicitado) | Importe Original Solicitado |
-| 15 | [Producto 061](#especificaciones-de-producto-061-campo-iso-59) | Envío de Código de Seguridad |
-| 16 | [Producto 083](#especificaciones-de-producto-083-operatoria-qr) | Operatoria QR |
+| #   | Producto                                                                               | Descripción                                    |
+| --- | -------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| 1   | [Producto 021](#producto-021--indicador-de-capacidad-de-la-terminal)                   | Indicador de Capacidad de la Terminal          |
+| 2   | [Producto 028 (1 dígito)](#producto-028--indicador-de-encripción-3desdukpt-1-dígito)   | Indicador de Encripción 3DES/DUKPT (1 dígito)  |
+| 3   | [Producto 028 (2 dígitos)](#producto-028--indicador-de-encripción-3desdukpt-2-dígitos) | Indicador de Encripción 3DES/DUKPT (2 dígitos) |
+| 4   | [Producto 084](#producto-084--ksn-dukpt)                                               | KSN DUKPT                                      |
+| 5   | [Producto 078](#producto-078--indicador-de-mpos)                                       | Indicador de mPOS                              |
+| 6   | [Producto 022](#producto-022--indicador-de-fallback)                                   | Indicador de Fallback                          |
+| 7   | [Producto 101](#producto-101--indicador-de-requerimiento-de-tid)                       | Indicador de requerimiento de TID              |
+| 8   | [Producto 043](#producto-043--tid-terminal-identification)                             | TID (Terminal Identification)                  |
+| 9   | [Producto 103](#producto-103--identificador-del-submerchant-id)                        | Identificador del Submerchant ID               |
+| 10  | [Producto 062](#producto-062--nombre-o-datos-del-submerchant)                          | Nombre o Datos del Submerchant                 |
+| 11  | [Producto 033](#producto-033--datos-del-submerchant-payfac)                            | Datos del Submerchant (PayFac)                 |
+| 12  | [Producto 102](#producto-102--identificador-del-gateway)                               | Identificador del Gateway                      |
+| 13  | [Producto 094](#producto-094--indicador-de-autorización-parcial)                       | Indicador de Autorización Parcial              |
+| 14  | [Producto 044](#producto-044--importe-original-solicitado)                             | Importe Original Solicitado                    |
+| 15  | [Producto 061](#especificaciones-de-producto-061-campo-iso-59)                         | Envío de Código de Seguridad                   |
+| 16  | [Producto 083](#especificaciones-de-producto-083-operatoria-qr)                        | Operatoria QR                                  |
 
 ---
 
@@ -664,7 +664,7 @@ En caso de no conocer el subtipo de QR, el Comercio deberá informar el valor **
 0830002004208Q00525560
 ```
 
-Claro 😊. A continuación te dejo el **Producto 085 convertido a Markdown**, manteniendo el mismo estilo y nivel de detalle que el Producto 083 para que la documentación quede homogénea.
+
 
 **Producto 085 – ID de Billetera**
 
