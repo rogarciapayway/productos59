@@ -21,8 +21,6 @@
 | 17  | [Producto 085](#producto-085--id-de-billetera)                                         | Id Billetera                                   |
 | 18  | [Producto 106](#producto-106--debt-repayment)                                          | Debt Repayment                                 |
 
----
-
 ***
 ***
 
@@ -306,7 +304,7 @@ Este producto contiene el **TID asignado por la marca**, enviado por la red en e
 ## Observaciones
 
 - El Submerchant ID debe ser **único por subcomercio** en las bases del PayFac.
-
+***
 ***
 # Producto 062 – Nombre o Datos del Submerchant
 ***
@@ -340,7 +338,7 @@ PAYFACABR*TIENDA
 ## Observaciones
 
 - La longitud total del valor no puede superar **25 caracteres**.
-
+***
 ***
 # Producto 033 – Datos del Submerchant (PayFac)
 ***
@@ -464,7 +462,7 @@ PAYFACABR*TIENDA
 | -------- | -------- | -------- | ----------------------------------------------------------------- |
 | 249      | 6        | N3       | Código país del gobierno que controla al submerchant (si aplica). |
 
-
+***
 ***
 # Producto 102 – Identificador del Gateway
 ***
@@ -495,7 +493,7 @@ PAYFACABR*TIENDA
     ## Observaciones
     - Este producto permite que la marca identifique qué **gateway** intervino en la transacción.  
     - Se envía típicamente en operaciones **eCommerce** y flujos con **procesadores externos**.
-
+***
 ***
 # Producto 094 – Indicador de Autorización Parcial
 ***
@@ -530,7 +528,7 @@ Aplica únicamente para transacciones de **compra**, processing code “00”, M
 - Debe enviarse **siempre** que el dispositivo soporte autorizaciones parciales.
 - Afecta únicamente mensajes ISO **0200** (request de compra).
 ```
-
+***
 ***
 # Producto 044 – Importe Original Solicitado
 ***
@@ -572,7 +570,7 @@ Monto original: **1.234,50** → “000000123450”
 
 - Se usa **solo** cuando la red determina que la transacción debe aprobarse por un monto menor al solicitado.
 - El campo 4 en 0210 mostrará el monto autorizado; este producto muestra el monto original.
-
+***
 ***
 # Especificaciones de Producto 061 (Campo ISO 59)
 ***
@@ -615,7 +613,7 @@ Se utiliza el producto **061** del Campo ISO 59 para trasladar los datos del ide
 | Longitud Sub-Campo          | N3           | 3         | ASCII       | "015"                                                        |
 | Identificador del Sub-Campo | An3          | 3         | ASCII       | "156"                                                        |
 | Dato del Sub-Campo          | An12         | 12        | ASCII       | IP de origen (sin puntos, completo con blancos a la derecha) |
-
+***
 ***
 # Especificaciones de Producto 083 (Operatoria QR)
 ***
@@ -697,7 +695,7 @@ En caso de no conocer el subtipo de QR, el Comercio deberá informar el valor **
 ```text
 0830002004208Q00525560
 ```
-
+***
 ***
 # Producto 085 – ID de Billetera
 ***
@@ -735,7 +733,7 @@ El **sub-campo 210** es **obligatorio** y debe ser informado por el Comercio.
 ```
 08500010042103
 ```
-
+***
 ***
 # Producto 106 – Debt Repayment
 ***
