@@ -27,7 +27,7 @@
 ***
 
 # Producto 021 – Indicador de Capacidad de la Terminal
-
+***
 Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso que acepta la terminal, se enviará este producto.
 
 ## Tabla Técnica
@@ -59,12 +59,11 @@ Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso
 - Este producto es **mandatorio** para operaciones de **mundo presente y ecommerce**.
 
 ## ✔️ Caso 1 — Capacidad de encripción de **1 dígito** (0..9)
-
 ***
 ***
 
 # Producto 028 – Indicador de Encripción 3DES/DUKPT (1 dígito)
-
+***
 ## Tabla Técnica
 
 | **Dato**                  | **Atributo** | **Bytes** | **Formato** | **Comentarios**                                                            |
@@ -114,12 +113,11 @@ Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso
 | 4      | Newland N910+      |
 | 6      | Ingenico Lane 3000 |
 | 11     | Nexgo N6           |
-
 ***
 ***
 
 # Producto 084 – KSN DUKPT
-
+***
 ## Tabla Técnica
 
 | **Dato**                  | **Atributo** | **Bytes** | **Formato** | **Comentarios**                  |
@@ -139,9 +137,8 @@ Con el propósito de informarle al Host cuál es la capacidad máxima de ingreso
 
 ***
 ***
-
 # Producto 078 – Indicador de mPOS
-
+***
 Se incorpora a la mensajería actual el producto 078 del Campo ISO 59.
 
 ## Tabla Técnica – Caso General (VISA y otras marcas)
@@ -189,9 +186,8 @@ Para transacciones MasterCard/Maestro, se debe **agregar un segundo subcampo** a
 
 ***
 ***
-
 # Producto 022 – Indicador de Fallback
-
+***
 ## Tabla Técnica
 
 | **Dato**                   | **Atributo** | **Bytes** | **Formato** | **Comentarios**           |
@@ -221,9 +217,8 @@ Para transacciones MasterCard/Maestro, se debe **agregar un segundo subcampo** a
 
 ***
 ***
-
 # Producto 101 – Indicador de requerimiento de TID
-
+***
 Este producto informa que el comercio está preparado para recibir el TID provisto por la marca dentro del Campo ISO 60.
 
 ## Tabla Técnica
@@ -256,8 +251,8 @@ Este producto informa que el comercio está preparado para recibir el TID provis
 
 ***
 ***
-
 # Producto 043 – TID (Terminal Identification)
+***
 
 Este producto contiene el **TID asignado por la marca**, enviado por la red en el Campo ISO 60 de los mensajes de respuesta 0110 / 0210.
 
@@ -286,7 +281,10 @@ Este producto contiene el **TID asignado por la marca**, enviado por la red en e
 - El TID puede variar según reglas de cada marca y modalidad.
 - Este producto se devuelve **solo si el comercio envía antes el Producto 101** solicitando el TID.
 
+***
+***
 # Producto 103 – Identificador del Submerchant ID
+***
 
 ## Tabla Técnica
 
@@ -310,9 +308,8 @@ Este producto contiene el **TID asignado por la marca**, enviado por la red en e
 - El Submerchant ID debe ser **único por subcomercio** en las bases del PayFac.
 
 ***
-***
-
 # Producto 062 – Nombre o Datos del Submerchant
+***
 
 ## Tabla Técnica
 
@@ -345,9 +342,8 @@ PAYFACABR*TIENDA
 - La longitud total del valor no puede superar **25 caracteres**.
 
 ***
-***
-
 # Producto 033 – Datos del Submerchant (PayFac)
+***
 
 ## Tabla Técnica General
 
@@ -468,10 +464,10 @@ PAYFACABR*TIENDA
 | -------- | -------- | -------- | ----------------------------------------------------------------- |
 | 249      | 6        | N3       | Código país del gobierno que controla al submerchant (si aplica). |
 
-***
-***
 
+***
 # Producto 102 – Identificador del Gateway
+***
 
 ## Tabla Técnica
 
@@ -500,7 +496,9 @@ PAYFACABR*TIENDA
     - Este producto permite que la marca identifique qué **gateway** intervino en la transacción.  
     - Se envía típicamente en operaciones **eCommerce** y flujos con **procesadores externos**.
 
+***
 # Producto 094 – Indicador de Autorización Parcial
+***
 
 Este producto informa si la terminal está habilitada para procesar **autorizaciones parciales**.  
 Es mandatorio para todo dispositivo que soporte esta operativa.  
@@ -534,9 +532,8 @@ Aplica únicamente para transacciones de **compra**, processing code “00”, M
 ```
 
 ***
-***
-
 # Producto 044 – Importe Original Solicitado
+***
 
 Este producto se envía en el **ISO 60 de la respuesta 0210**, únicamente cuando la marca responde:  
 **Response Code = “10”** (transacción aprobada parcialmente).
@@ -577,9 +574,8 @@ Monto original: **1.234,50** → “000000123450”
 - El campo 4 en 0210 mostrará el monto autorizado; este producto muestra el monto original.
 
 ***
-***
-
 # Especificaciones de Producto 061 (Campo ISO 59)
+***
 
 ## 1. PRODUCTO 061 – ENVÍO DE CÓDIGO DE SEGURIDAD
 
@@ -620,7 +616,9 @@ Se utiliza el producto **061** del Campo ISO 59 para trasladar los datos del ide
 | Identificador del Sub-Campo | An3          | 3         | ASCII       | "156"                                                        |
 | Dato del Sub-Campo          | An12         | 12        | ASCII       | IP de origen (sin puntos, completo con blancos a la derecha) |
 
+***
 # Especificaciones de Producto 083 (Operatoria QR)
+***
 
 En caso de que el Sistema Propio incorpore la operatoria de pago con lectura de **QR**, se deben tener en cuenta las siguientes consideraciones técnicas para el cierre de lote.
 
@@ -643,9 +641,6 @@ Se debe incorporar el **campo ISO 59** con el producto **“083”**, independie
 
 > **Importante:** Dado que comparten la misma terminal, las transacciones realizadas con QR **deben sumarse** en los consolidados (compras, anulaciones, devoluciones) junto al resto de las operaciones del mismo lote.
 
-***
-***
-
 **Producto 083 – Marca QR**
 
 ## Descripción
@@ -666,9 +661,6 @@ En caso de no conocer el subtipo de QR, el Comercio deberá informar el valor **
 
 > **Nota:**  
 > Si la tarjeta/PAN que se cursa **no es de bandera Mastercard**, se deberá informar solamente el **producto 083** con el **sub-campo 208**.
-
-***
-***
 
 ## Estructura del Producto 083
 
@@ -706,16 +698,15 @@ En caso de no conocer el subtipo de QR, el Comercio deberá informar el valor **
 0830002004208Q00525560
 ```
 
+***
 # Producto 085 – ID de Billetera
+***
 
 ## Descripción
 
 Permite identificar la **billetera digital** que está operando en la transacción.
 
 El **sub-campo 210** es **obligatorio** y debe ser informado por el Comercio.
-
-***
-***
 
 ## Estructura del Producto 085
 
@@ -746,9 +737,8 @@ El **sub-campo 210** es **obligatorio** y debe ser informado por el Comercio.
 ```
 
 ***
-***
-
 # Producto 106 – Debt Repayment
+***
 
 En este campo se deberá informar el indicador especial correspondiente a la operatoria **Debt repayment: `'9'`**
 
