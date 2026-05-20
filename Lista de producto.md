@@ -18,6 +18,8 @@
 | 14  | [Producto 044](#producto-044--importe-original-solicitado)                             | Importe Original Solicitado                    |
 | 15  | [Producto 061](#especificaciones-de-producto-061-campo-iso-59)                         | Envío de Código de Seguridad                   |
 | 16  | [Producto 083](#especificaciones-de-producto-083-operatoria-qr)                        | Operatoria QR                                  |
+| 17  | [Producto 085](#producto-085--id-de-billetera)                                         | Id Billetera                                   |
+| 18  | [Producto 106](#producto-106--debt-repayment)                                          | Debt Repayment                                 |
 
 ---
 
