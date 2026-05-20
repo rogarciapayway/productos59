@@ -714,6 +714,7 @@ El **sub-campo 210** es **obligatorio** y debe ser informado por el Comercio.
 ```
 08500010042103
 ```
+***
 
 # Producto 106 – Debt Repayment
 
@@ -804,3 +805,4 @@ A continuación se detallan los controles aplicables a la operatoria:
 | 5   | 3 rechazos misma tarjeta/comercio | 57       | `.No reintentar por 14 días^`            |
 | 6   | Rechazo Categoría 1               | 57       | `.No reintentar, use otra tarjeta^`      |
 
+---
