@@ -715,7 +715,7 @@ El **sub-campo 210** es **obligatorio** y debe ser informado por el Comercio.
 08500010042103
 ```
 
-# Producto 106 - Debt Repayment
+# Producto 106 – Debt Repayment
 
 En este campo se deberá informar el indicador especial correspondiente a la operatoria **Debt repayment: `'9'`**
 
