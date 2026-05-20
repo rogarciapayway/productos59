@@ -672,7 +672,7 @@ En caso de no conocer el subtipo de QR, el Comercio deberá informar el valor **
 0830002004208Q00525560
 ```
 
-**Producto 085 – ID de Billetera**
+# Producto 085 – ID de Billetera
 
 ## Descripción
 
@@ -712,3 +712,93 @@ El **sub-campo 210** es **obligatorio** y debe ser informado por el Comercio.
 ```
 08500010042103
 ```
+
+# Producto 106 - Debt Repayment
+
+En este campo se deberá informar el indicador especial correspondiente a la operatoria **Debt repayment: `'9'`**
+
+### Estructura
+
+| Dato                   | Atributo | Bytes | Formato | Comentarios          |
+| ---------------------- | -------- | ----- | ------- | -------------------- |
+| Longitud total         | N3       | 2     | BCD     |                      |
+| Tipo de producto       | An3      | 3     | ASCII   | Valor: `106`         |
+| Cantidad de subcampos  | N4       | 4     | ASCII   | Valor: `0001`        |
+| Longitud subcampo      | N3       | 3     | ASCII   | Valor: `004`         |
+| Identificador subcampo | An3      | 3     | ASCII   | Valor: `253`         |
+| Dato del subcampo      | An1      | 1     | ASCII   | `9 = Debt repayment` |
+
+## 4. Configuración y Diferenciación de Respuestas en ISO 8583
+
+Para diferenciar los distintos rechazos que pueden ocurrir en esta operatoria, se definió un nuevo código de respuesta asociado a una leyenda. Esto permite obtener más detalle sobre el motivo del rechazo en los mensajes **MTI 0210**.
+
+## Campo ISO 39 - Código de respuesta
+
+### Descripción
+
+El **campo 39 del estándar ISO 8583** es un campo en formato ASCII que tiene la unción principal de proporcionar al comercio una respuesta relacionada con el resultado de una transacción. Su propósito es informar si la operación fue exitosa o, en caso contrario, detallar el motivo del rechazo o error.
+
+### Atributos
+
+- Largo fijo  
+- Tipo: ASCII  
+- Longitud: 2 posiciones  
+
+### Valor
+
+| Cod Rta | Descripción                     | Referencia                                    |
+| ------- | ------------------------------- | --------------------------------------------- |
+| H1      | Error Mensajería Debt repayment | Datos de la mensajería incompletos o erróneos |
+
+## Campo ISO 63 – Leyenda asociada
+
+### Descripción
+
+El campo 63 en ISO 8583:
+
+- Se transmite en **ASCII**  
+- Su longitud se expresa en **BCD (Binary Coded Decimal)**  
+
+### Atributos
+
+- Longitud variable  
+- Permite enviar información adicional o personalizada  
+- La longitud real se define en el prefijo BCD  
+
+### Reglas de visualización e impresión si está informado en el BitMap
+
+#### 1. Si el primer carácter es `.`
+
+- Mostrar en display  
+- Imprimir en ticket  
+- Máximo: 40 caracteres  
+
+#### 2. Si el primer carácter es `,`
+
+- No mostrar en display  
+- Imprimir en ticket  
+- Máximo: 200 caracteres  
+- Reservar 5 líneas (32 columnas)
+
+### Formato especial de impresión
+
+- Usar el carácter especial | (ALT + 124) para indicar el fin de línea, continuando en el próximo renglón. No se debe dejar un espacio luego del carácter especial | (ALT + 124)  
+- Usar el carácter especial ^ (ALT + 94) para indicar el fin del mensaje.  
+- Las líneas impresas deben estar centradas. 
+  Estos formatos de mensaje pueden enviarse en cualquier tipo de transacción  
+
+Los mensajes de detalle se especifican en la sección de rechazos.
+
+## 5. Rechazos
+
+A continuación se detallan los controles aplicables a la operatoria:
+
+| #   | Control                           | Campo 39 | Campo 63 – Leyenda                       |
+| --- | --------------------------------- | -------- | ---------------------------------------- |
+| 1   | MCC no elegible (≠ 6012/6051)     | H1       | `.Debt repayment solo rubros 6012 6051^` |
+| 2   | No permite cashback               | H1       | `.Pago de deuda no admite cashback^`     |
+| 3   | No admite preautorización         | H1       | `.Error mensajeria Debt repayment^`      |
+| 4   | Producto crédito no permitido     | H1       | `.Debt repayment no admite credito^`     |
+| 5   | 3 rechazos misma tarjeta/comercio | 57       | `.No reintentar por 14 días^`            |
+| 6   | Rechazo Categoría 1               | 57       | `.No reintentar, use otra tarjeta^`      |
+
